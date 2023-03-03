@@ -1,20 +1,23 @@
 import numpy as np
-from numpy import add
 import pandas as pd
+from pathlib import Path
 
 
-df = pd.read_csv ('data.csv') 
-#print(df)
+input_data = Path.cwd().parent / 'Data' / 'small_data.csv'
+output_data = Path.cwd().parent / 'Data' / r'output.txt'
+
+df = pd.read_csv(input_data)
+# print(df)
 
 # add a json column to the dataframe
 # splitlines will split the json into multiple rows not a single one
 df['json'] = df.to_json(orient='records', lines=True).splitlines()
-#print(df)
+# print(df)
 
 # just take the json column of the dataframe
-dfjson = df['json']
-print(dfjson)
+df_json = df['json']
+# print(df_json)
 
 # print out the dataframe to a file
 # Note that the timestamp forward slash will be escaped to stay true to JSON schema
-np.savetxt(r'./output.txt', dfjson.values, fmt='%s')
+np.savetxt(output_data, df_json.values, fmt='%s')

@@ -350,3 +350,16 @@ MigrationBackup/
 .ionide/
 client/data.csv
 client/output.txt
+
+# Local Data
+Data
+
+# IDEA
+.idea
+.idea/vcs.xml
+.idea/Document-Streaming.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/inspectionProfiles
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/inspectionProfiles/Project_Default.xml
