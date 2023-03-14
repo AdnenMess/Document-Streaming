@@ -27,7 +27,7 @@ docker run --rm --network document-streaming_default --name my-api-ingest -p 80:
 ./kafka-console-consumer.sh --topic ingestion-topic --bootstrap-server localhost:9092
 ````
 
-6. To test our API & kafka docker compose in Postman, we need to change to POST address to:
+6. To test our API & kafka docker compose in Postman, we need the change the POST address to:
 ```localhost:80/invoiceitem```
 
 NB: ```localhost:8000/invoiceitem``` is for the API that run locally and 
