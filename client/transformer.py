@@ -3,10 +3,10 @@ import pandas as pd
 from pathlib import Path
 
 
-input_data = Path.cwd().parent / 'Data' / 'small_data.csv'
+input_data = Path.cwd().parent / 'Data' / 'data.csv'
 output_data = Path.cwd().parent / 'Data' / r'output.txt'
 
-df = pd.read_csv(input_data)
+df = pd.read_csv(input_data, encoding='windows-1252')
 # print(df)
 
 # add a json column to the dataframe
