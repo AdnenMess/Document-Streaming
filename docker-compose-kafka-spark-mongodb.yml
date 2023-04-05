@@ -48,7 +48,7 @@ services:
     container_name: mongo-dev
     image: mongo
     volumes:
-      - ~/Data/mongodb:/data/db
+      - ./Data/mongodb:/data/db
     restart: 'no'
     ports:
       - "27017:27017"
